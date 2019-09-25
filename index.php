@@ -93,11 +93,13 @@
                         <input type="password" name="password" />
 
                         <input type="submit" value="REGISTER" />
-                        </form>
+			</form>
+
+			<h1>CALIDAD ETB</h1>
 
                 </div>
 
-                
+			
                 
                 
                 
