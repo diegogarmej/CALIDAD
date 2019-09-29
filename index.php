@@ -95,7 +95,7 @@
                         <input type="submit" value="REGISTER" />
 			</form>
 
-			<h1>CALIDAD 100 % ETB 2019...</h1>
+			<h1>CALIDAD 100 % ETB</h1>
 
                 </div>
 
