@@ -1,0 +1,141 @@
+
+
+* {
+    margin:0px;
+    padding: 0px; 
+    font-family: sans-serif, Helvetica, Arial;
+    text-decoration: none; 
+
+
+}
+
+.clearfix{
+        clear: both;
+        float: none;
+
+}
+
+
+
+body{
+
+    background: url(../img/ETB.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+
+
+}
+
+/*cabezera*/
+
+#header{
+
+    width: 60%;
+    height: auto;
+    background: transparent;
+    margin: 0px auto;
+   
+    /*border: 10px solid black;*/
+}
+
+#logo{
+
+    
+    height: 80px;
+    width: 100%;
+
+    
+    }
+#logo a{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: rgb(218, 242, 245);
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+    transition: all 500ms;
+    line-height: 100px;
+}    
+#logo a:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 0px black, -3px -3px 0px black, -2px -2px 0px black;
+
+}
+
+#menu {
+    clear: both;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9);
+    border: 1px solid #c9c9c9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#menu ul{
+    list-style: none;
+
+}
+
+#menu ul li{
+
+    float: left;
+    line-height: 40px;
+    border-right: 1px solid #d7d7d7;
+}
+
+#menu ul li a{
+
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #4cbb9f;
+    
+} 
+
+#menu ul li:hover {
+
+    background: linear-gradient(to bottom, #85f054 0px, #dad9da  100%);
+
+    
+} 
+
+
+
+#container{
+    width: 85%;
+    min-height: 900px;
+    margin: 0px auto;
+    margin-top: 30px; 
+}
+/*BARRA LATERAL*/
+
+#login{
+    display: block;
+    margin: 20px auto;
+    width: 40%;
+    background: rgba(55, 156, 163, 0.39);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label,
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+        display: block;
+        width: 95%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+}
+
+input[type="button"],
+input[type="submit"]{
+    margin-top: 5px;
+    margin-bottom: 5px;
+      
+
+}
