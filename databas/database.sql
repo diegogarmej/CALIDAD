@@ -4,9 +4,9 @@ CREATE TABLE novedades()
     id              int(100) auto_increment not null,
     tipo_novedad    varchar(100) not null,
     fecha_visita    date,
-    obsevacion      varchar(100)not null
+    obsevacion      varchar(100)not null,
     CONSTRAINT pk_novedad PRIMARY KEY (id)     
-     )ENGINE=InnoDB; 
+     ) ENGINE=InnoDB; 
 
 
      CREATE TABLE auditor(
@@ -21,16 +21,16 @@ CREATE TABLE novedades()
      )ENGINE=InnoDB;
 
      CREATE  TABLE cambio(
-     id             int (100) auto_increment not null,
-     auditor_asigando int (100) not null,
-     cliente        varchar(100)not null,
-     direccion      varchar(100)not null,
-     contratista    varchar(100)not null,
-     actividad      varchar(100)not null,
-     tarea          varchar(100)not null,
-     hora           time not null,
-     tecnico        varchar(100)not null,
-     cambio         varchar(100)not null,
-     CONSTRAINT pk_cambio PRIMARY KEY (cambio) 
-     CONSTRAINT fk_cambio_auditor FOREIGN KEY (auditor_asigando) REFERENCES auditor ()
+     id                 int (100) auto_increment not null,
+     auditor_asigando   int (100) not null,
+     cliente            varchar(100)not null,
+     direccion          varchar(100)not null,
+     contratista        varchar(100)not null,
+     actividad          varchar(100)not null,
+     tarea              varchar(100)not null,
+     hora               time not null,
+     tecnico            varchar(100)not null,
+     cambio             varchar(100)not null,
+     CONSTRAINT pk_cambio PRIMARY KEY (id),
+     CONSTRAINT fk_cambio_auditor FOREIGN KEY (auditor_asigando) REFERENCES auditor (id)
      )ENGINE=InnoDB;
