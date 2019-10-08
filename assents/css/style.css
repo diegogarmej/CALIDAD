@@ -19,7 +19,7 @@
 
 body{
 
-    background: url(../img/ETB.jpeg);
+    background-color:#f3fcfd !important; 
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -120,22 +120,13 @@ body{
     background: rgba(55, 156, 163, 0.39);
     padding: 20px;
     border-radius: 5px;
+    color: #90a8f7
 }
 
-label,
-input[type="text"],
-input[type="email"],
-input[type="password"]{
-        display: block;
-        width: 95%;
-        margin-top: 2px;
-        margin-bottom: 2px;
-}
 
-input[type="button"],
-input[type="submit"]{
-    margin-top: 5px;
-    margin-bottom: 5px;
-      
+
+#input{
+    style= "color:blue" 
+    
 
 }

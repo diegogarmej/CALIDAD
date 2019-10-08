@@ -17,7 +17,7 @@
         
         <div id= "logo" >
             <a href="index.php">
-            Auditoria Calidad ETB 2019  
+             Calidad ETB 2019  
             </a>
         </div>
         
@@ -63,14 +63,14 @@
         <div id="container">
             <!----BARRA LATERAL Y PRINCIPAL--->
             <aside id="sidebar"></aside>
-                <div id="login">
+                <div id="login" style= color >
                     <h3>Ingreso</h3>
                     <form action="login.php" method="POST">
                         <label for="email">Email</label>
-                        <input type="email" name="email" /><br/>
+                        <input id="input" type="email" name="email" style="color:blue" /><br/>
 
                         <label for="password">Password</label>
-                        <input type="password" name="password" />
+                        <input  id="input" type="password" name="password" />
 
                         <input type="submit" value="START" />
 
@@ -80,29 +80,17 @@
                     <h3>register</h3>
                     <form action="register.php" method="POST">
                     
-                        <label for="name">Name</label >
-                        <input type="text" name="name"/>
-                        
-                        <label for="last name">Last name</label>
-                        <input type="text" name="last name " />
-                    
-                        <label for="email">Email</label>
-                        <input type="email" name="email" />
-
-                        <label for="password">Password</label>
-                        <input type="password" name="password" />
-
-                        <input type="submit" value="REGISTER" />
+                       
 			</form>
 
-			<h1>CALIDAD 100 % ETB 2019 Mosquera</h1>
+			<h1>CALIDAD 100 % ETB 2019</h1>
 
                 </div>
 
 			
                 
                 
-                
+               <div id ="footer"> 
                 
                 
                 <footer id="footer">

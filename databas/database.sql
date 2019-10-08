@@ -11,7 +11,7 @@ CREATE TABLE novedades()
 
      CREATE TABLE auditor(
      id             int(100) auto_increment not null,
-     novedad_id     int(100) not null, 
+        novedad_id     int(100) not null, 
      nombre         varchar(50) not null,
      apellido       varchar (50) not null,
      documento      int (20) not null,   
