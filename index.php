@@ -54,60 +54,33 @@
          <div class="clearfix"></div>
         
         </header>
-        
-        
-        
-        
-        
-        
+        <div>
         <div id="container">
-            <!----BARRA LATERAL Y PRINCIPAL--->
-            <aside id="sidebar"></aside>
-                <div id="login" style= color >
+            <!--inicio de sesion--->
+            <div id="login" style= color >
                     <h3>Ingreso</h3>
                     <form action="login.php" method="POST">
                         <label for="email">Email</label>
-                        <input id="input" type="email" name="email" style="color:blue" /><br/>
+                        <input id="input" type="email" name="email" style="color:blue" /> <br/>
 
                         <label for="password">Password</label>
                         <input  id="input" type="password" name="password" />
 
-                        <input type="submit" value="START" />
+                        <input type="submit" value="Iniciar" />
 
-                        </form>
+                        <h3>Solicitar una Cuenta</h3>
+                        <form action="solicitudcuenta.php" method="POST">
+                        <input id="registrar" type="submit" value="Registro"/>   
 
-                        <div id="register">
-                    <h3>register</h3>
-                    <form action="register.php" method="POST">
-                    
-                       
-			</form>
-
-			<h1>CALIDAD 100 % ETB 2019</h1>
-
-                </div>
-
-			
-                
-                
-               <div id ="footer"> 
-                
-                
-                <footer id="footer">
+                    </form>
+            </div> 
+                                  
+               
+               
+                <div id ="footer"> 
+                    <footer id="footer">
                     <p>Desarrolado por Diego Armando Garay Mejía &copy; 2019</p>
-                </footer>
-
-
-         </div>   
-
-
-
-
-
-
-
-
-
-
+                    </footer>
+                </div>
     </body>
 </html>
