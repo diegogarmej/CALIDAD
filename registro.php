@@ -56,22 +56,35 @@
         </header>
         <div>
         <div id="container">
-            <!--inicio de sesion--->
+            <!--registo--->
+            
             <div id="login" style= color >
-                    <h3>Ingreso</h3>
-                    <form action="registro.php" method="POST">
-                        <label for="email">Email</label>
-                        <input id="input" type="email" name="email" style="color:blue" /> <br/>
+                    <h3>Registro</h3>
+                   
+                        <form action="login.php" method="POST">
+                        <label for="name">Nombre</label>
+                        <input id="input" type="text" name="name" style="color:blue" /> <br/>
 
-                        <label for="password">Password</label>
-                        <input  id="input" type="password" name="password" />
+                        <form action="login.php" method="POST">
+                        <label for="apellido">Apellido</label>
+                        <input id="input" type="text" name="apellido" style="color:blue" /> <br/>
 
-                        <input type="submit" value="Iniciar" />
 
-                        <h3>Crear Cuenta</h3>
-                        <form action="./registro.php" method="POST">
-                        <input id="registrar" type="submit" value="Registrate"/>  
-                        </form> 
+                        <form action="login.php" method="POST">
+                        <label for="email">Numero Celular</label>
+                        <input id="input" type="text" name="numerocelular" style="color:blue" /> <br/>
+
+                        <form action="login.php" method="POST">
+                        <label for="correo">Correo Electronico</label>
+                        <input id="input" type="text" name="correo" style="color:blue" /> <br/>
+
+                        <form action="login.php" method="POST">
+                        <label for="email">Contraseña Nueva</label>
+                        <input id="input" type="password" name="contraseña" style="color:blue" /> <br/>
+
+                        
+                        <input type="submit" value="Registrate" />
+  
 
                     </form>
             </div> 
@@ -85,3 +98,4 @@
                 </div>
     </body>
 </html>
+
