@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8"/>
         <title>Auditoria_Calidad</title>
-        <link  rel="stylesheet" type="text/css"  href="./assents/css/style.css"/>
+        <link  rel="stylesheet" type="text/css"  href="../assents/css/style.css"/>
 
     </head>
    
@@ -56,35 +56,23 @@
         </header>
         <div>
         <div id="container">
-            <!--registo--->
-            
+            <!--inicio de sesion--->
             <div id="login" style= color >
-                    <h3>Registro</h3>
-                   
-                        <form action="login.php" method="POST">
-                        <label for="name">Nombre</label>
-                        <input id="input" type="text" name="name" style="color:blue" /> <br/>
+                    <h3>Ingreso</h3>
+                    <form action="index.php" method="POST">
+                        <label for="email">Email</label>
+                        <input id="input" type="email" name="email" style="color:blue" /> <br/>
 
-                        <form action="login.php" method="POST">
-                        <label for="apellido">Apellido</label>
-                        <input id="input" type="text" name="apellido" style="color:blue" /> <br/>
+                        <label for="password">Password</label>
+                        <input  id="input" type="password" name="password" />
 
+                        <input type="submit" value="Iniciar" />
 
-                        <form action="login.php" method="POST">
-                        <label for="email">Numero Celular</label>
-                        <input id="input" type="text" name="numerocelular" style="color:blue" /> <br/>
-
-                        <form action="login.php" method="POST">
-                        <label for="correo">Correo Electronico</label>
-                        <input id="input" type="text" name="correo" style="color:blue" /> <br/>
-
-                        <form action="login.php" method="POST">
-                        <label for="email">Contraseña Nueva</label>
-                        <input id="input" type="password" name="contraseña" style="color:blue" /> <br/>
-
-                        
-                        <input type="submit" value="Registrate" />
-  
+                        <h3>Crear Cuenta</h3>
+                      </form>  
+                       <form action="./registro.php" method="POST"> 
+                        <input id="registrar" type="submit" value="Registrate"/>  
+                        </form> 
 
                     </form>
             </div> 
@@ -98,4 +86,3 @@
                 </div>
     </body>
 </html>
-
