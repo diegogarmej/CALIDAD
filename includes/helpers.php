@@ -16,11 +16,11 @@ function mostrarError($errores, $campo){
 }
 
 function borrarErrores(){
-    $borrado= true;
+
 
     $_SESSION['errores'] = null;  
 
-    $borrado = session_unset($_SESSION ['errores']);
+    $borrado = session_unset();
 
     return $borrado;
 
