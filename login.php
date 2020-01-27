@@ -1,5 +1,7 @@
-<?php
+    <?php
 session_start();
+
+
 if(isset($_POST)){
 
 
@@ -13,6 +15,7 @@ if(isset($_POST)){
 
         //array de errores
         $errores = array();
+        
 
 
     //validar los datos antes de guardarlos en la base de datos 
@@ -44,7 +47,7 @@ if(isset($_POST)){
             $numero_celular_valido =true;
         }else{
             $numero_celular_valido = false;
-            $errores['numerocelular'] = "el numero de clular no es valido";
+            $errores['numerocelular'] = "el numero de celular no es valido";
            
         }   
         //Validar campo correo
@@ -64,13 +67,28 @@ if(isset($_POST)){
         $guardar_usuario= false;
 
         if (count($errores)== 0){
-        //insertar usuario en la base de datos en la tabla usuarios
-         $guardar_usuario= true;
+        $guardar_usuario= true;  
+            //cifrar contraseña 
+            $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost' =>4]);
+            //var_dump($password);
+            //var_dump($password_segura);
+            //var_dump(password_verify($password, $password_segura));
+            
+
+
+            //insertar usuario en la base de datos en la tabla usuarios
+                $sql = "INSERT INTO auditor VALUES ()"
+
+
         }else{
             $_SESSION['errores'] = $errores;
-           // header ('Location: registro.php'); 
+           header ('Location: registro.php'); 
+
+
         }
-//var_dump($errores);
-var_dump($_SESSION['errores']);
+
+             
+ //var_dump($_SESSION['errores']);
+ //var_dump($_SESSION['errores']);
 
 }
