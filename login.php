@@ -77,7 +77,7 @@ if(isset($_POST)){
 
 
             //insertar usuario en la base de datos en la tabla usuarios
-                $sql = "INSERT INTO auditor VALUES ()"
+                $sql = "INSERT INTO auditor VALUES (null, $)";
 
 
         }else{
