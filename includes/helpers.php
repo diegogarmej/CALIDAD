@@ -13,15 +13,25 @@ function mostrarError($errores, $campo){
 
     return $alerta; 
 
+
+
 }
 
 function borrarErrores(){
-    $borrado= true;
+    $borrado= false;
 
-    $_SESSION['errores'] = null;  
+    if(isset ($_SESSION['errores'])){
+    $_SESSION['errores'] = null;
 
-    $borrado = session_unset($_SESSION ['errores']);
-
+    $borrado = session_unset();
+}
+    
+    if(isset ($_SESSION['completado'])){
+    
+        $_SESSION['completado'] = null;
+        session_unset($_SESSION['completado']);
+    }
+    
     return $borrado;
 
 }

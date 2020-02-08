@@ -1,3 +1,4 @@
+
     <?php
 session_start();
 
@@ -9,8 +10,8 @@ if(isset($_POST)){
 
     $nombre = isset ($_POST['name']) ? $_POST['name'] : false;
     $apellidos   = isset ($_POST['apellido']) ? $_POST['apellido'] : false;
-    $numero_celular =  isset ($_POST['numerocelular']) ? $_POST['numerocelular'] : false;
-    $correo =  isset ($_POST['correo']) ? $_POST['correo'] : false;
+    $numerodocumento=  isset ($_POST['numerodocumento']) ? $_POST['numerodocumento'] : false;
+    $codigoETB = isset ($_POST['codigoETB']) ? $_POST['codigoETB'] : false;
     $password = isset  ($_POST['contraseña']) ? $_POST['contraseña'] : false;
 
         //array de errores
@@ -42,27 +43,27 @@ if(isset($_POST)){
 
         //validar campo  Numero celular
         
-        if(!empty ($numero_celular) && is_numeric($numero_celular))
+        if(!empty ($numerodocumento) && is_numeric($numerodocumento))
         {
-            $numero_celular_valido =true;
+            $numero_documento_valido =true;
         }else{
-            $numero_celular_valido = false;
-            $errores['numerocelular'] = "el numero de celular no es valido";
+            $numero_documento_valido = false;
+            $errores['numerodocumento'] = "el numero de documento no es valido";
            
         }   
         //Validar campo correo
-        if(!empty ($correo ) && filter_var($correo, FILTER_VALIDATE_EMAIL)){
-            $email_valido =true;
+        if(!empty ($codigoETB ) && filter_var($codigoETB,)){
+            $codigoETB_valido =true;
         }else{
-            $email_valido = false;
-            $errores['correo'] = "el campo correo no es valido";
+            $codigoETB_valido = false;
+            $errores['correo'] = "el codigo ETB  no es valido";
         }    
         //Validar campo password
         if(!empty ($password)){
             $password_valido =true;
         }else{
             $password_valido = false;
-            $errores['contraseña'] = "El  campo contraseña esta vacio";
+            $errores['password'] = "El  campo contraseña no puede estar vacio";
         }
         $guardar_usuario= false;
 
@@ -77,10 +78,11 @@ if(isset($_POST)){
 
 
             //insertar usuario en la base de datos en la tabla usuarios
-                $sql = "INSERT INTO auditor VALUES (null, $)";
+                $sql = "INSERT INTO auditor VALUES ()";
 
 
-        }else{
+        }
+        else{
             $_SESSION['errores'] = $errores;
            header ('Location: registro.php'); 
 

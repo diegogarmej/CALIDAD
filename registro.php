@@ -13,13 +13,15 @@
 
             
         <div id="login" style= color >
-           <!--?php if(isset($_SESSION['errores'])) : ?
-             ?php var_dump($_SESSION['errores']);?     
-            ?php endif; ?--->
+           
+        <?php if(isset($_SESSION['errores'])) : ?>
+             <?php echo var_dump($_SESSION['errores']);?>  
+            <?php endif; ?>
 
 
-            <h3>Registro</h3>
-                   
+            <h3>Registro</h3> 
+            <!--mostrar errores-->
+             
                 <form action="login.php" method="POST">
                 <label for="name">Nombre</label>
                 <input id="input" type="text" name="name" style="color:blue" /> <br/>
@@ -36,9 +38,16 @@
                 <input id="input" type="text" name="numerodocumento" style="color:blue" /> <br/>
                 
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'numerodocumento'): '';?>
+
+
+
+                <label for="correo">Direccion de correo</label>
+                <input id="input" type="text" name="correo" style="color:blue" /> <br/>
+                
+                <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'correo'): '';?>   
                         
-                <label for="CodigoETB">Codigo ETB</label>
-                <input id="input" type="text" name="CodigoETB" style="color:blue" /> <br/>
+                <label for="Codigo">Codigo ETB</label>
+                <input id="input" type="text" name="Codigo" style="color:blue" /> <br/>
                 
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'CodigoETB'): '';?>   
                 
@@ -52,9 +61,9 @@
                         
                 <input type="submit" name="submit" value="Registar  " />
             </form>
-
-             <?php borrarErrores(); ?>
             
+             <!--?php borrarErrores(); ?-->
+          
             </div> 
                                   
                
