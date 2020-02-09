@@ -14,11 +14,7 @@
             
         <div id="login" style= color >
            
-        <?php if(isset($_SESSION['errores'])) : ?>
-             <?php echo var_dump($_SESSION['errores']);?>  
-            <?php endif; ?>
-
-
+       
             <h3>Registro</h3> 
             <!--mostrar errores-->
              
@@ -46,10 +42,11 @@
                 
                 <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'correo'): '';?>   
                         
-                <label for="Codigo">Codigo ETB</label>
-                <input id="input" type="text" name="Codigo" style="color:blue" /> <br/>
                 
-                <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'CodigoETB'): '';?>   
+                <label for="Codigo">Codigo ETB</label>
+                <input id="input" type="text" name="codigo" style="color:blue" /> <br/>
+                
+                <?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'codigo'): '';?>   
                 
 
 
@@ -62,7 +59,7 @@
                 <input type="submit" name="submit" value="Registar  " />
             </form>
             
-             <!--?php borrarErrores(); ?-->
+             <?php borrarErrores(); ?>
           
             </div> 
                                   
@@ -70,7 +67,7 @@
                
            <div id ="footer"> 
            <footer id="footer">
-           <p>Desarrolado por Diego Armando Garay Mejía &copy; 2019</p>
+           <p>Desarrollado por Diego Armando Garay Mejía &copy; 2019</p>
            </footer>
             </div>
     </body>

@@ -1,6 +1,8 @@
 
     <?php
-session_start();
+
+//session_start();
+require_once 'includes/conexion.php';
 
 
 if(isset($_POST)){
@@ -11,7 +13,8 @@ if(isset($_POST)){
     $nombre = isset ($_POST['name']) ? $_POST['name'] : false;
     $apellidos   = isset ($_POST['apellido']) ? $_POST['apellido'] : false;
     $numerodocumento=  isset ($_POST['numerodocumento']) ? $_POST['numerodocumento'] : false;
-    $codigoETB = isset ($_POST['codigoETB']) ? $_POST['codigoETB'] : false;
+    $correo= isset ($_POST['correo']) ? $_POST['correo'] : false;
+    $codigoETB = isset ($_POST['codigo']) ? $_POST['codigo'] : false;
     $password = isset  ($_POST['contraseña']) ? $_POST['contraseña'] : false;
 
         //array de errores
@@ -52,12 +55,24 @@ if(isset($_POST)){
            
         }   
         //Validar campo correo
-        if(!empty ($codigoETB ) && filter_var($codigoETB,)){
-            $codigoETB_valido =true;
+        if(!empty ($correo) && filter_var($correo)){
+            $correo_valido=true;
         }else{
-            $codigoETB_valido = false;
-            $errores['correo'] = "el codigo ETB  no es valido";
+            $correo_valido = false;
+            $errores['correo'] = "el correo no es valido";
         }    
+
+        //validar campo codigo ETB
+
+        if(!empty($codigoETB)){
+                $codigoETB_valido= true;
+        }else{
+
+            $codigoETB_valido= false;
+            $errores['codigo'] = "el codigo ETB no es valido";
+        }
+
+
         //Validar campo password
         if(!empty ($password)){
             $password_valido =true;
@@ -68,18 +83,20 @@ if(isset($_POST)){
         $guardar_usuario= false;
 
         if (count($errores)== 0){
-        $guardar_usuario= true;  
-            //cifrar contraseña 
-            $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost' =>4]);
-            //var_dump($password);
-            //var_dump($password_segura);
-            //var_dump(password_verify($password, $password_segura));
+        $guardar_usuario= true; 
+        
+        
+        //cifrar contraseña 
+          $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost' =>4]);
+        // var_dump($password);
+        //var_dump($password_segura);
+        //var_dump(password_verify($password, $password_segura));
             
 
 
             //insertar usuario en la base de datos en la tabla usuarios
-                $sql = "INSERT INTO auditor VALUES ()";
-
+                $sql = "INSERT INTO auditor VALUES (null, '$nombre', '$apellidos', '$numerodocumento', '$correo', '$codigoETB', '$password');";
+                $guardar  = mysqli_query($db, $sql );
 
         }
         else{
