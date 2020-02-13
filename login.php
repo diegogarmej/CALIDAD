@@ -91,11 +91,10 @@ if(isset($_POST)){
         // var_dump($password);
         //var_dump($password_segura);
         //var_dump(password_verify($password, $password_segura));
-            
-
+        
 
             //insertar usuario en la base de datos en la tabla usuarios
-                $sql = "INSERT INTO auditor VALUES (null, '$nombre', '$apellidos', '$numerodocumento', '$correo', '$codigoETB', '$password');";
+                $sql = "INSERT INTO auditor VALUES (null, '$nombre', '$apellidos', '$numerodocumento', '$correo', '$codigoETB', '$password_segura');";
                 $guardar  = mysqli_query($db, $sql );
 
         }
