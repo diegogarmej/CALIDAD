@@ -1,0 +1,17 @@
+ git tiene tres estados principales :
+
+1. Confirmado: significa que los datos estan almacenados de manera segura en la base de datos local.
+
+2. Modificado: significa que se ha modificado el archivo pero aún no se ha confirmado en la base de datos local.
+
+3. Preparado: Siginifica que se ha m,arcado un archivo modificado en su version actual para que vaya en su proxima confirmación.
+
+
+
+Tres secciones principales de un proyecto de GIT:
+
+1. El Directorio de GIT. Git directory.
+
+2. El directorio de trabajo. working directory.
+
+3. El area de preparacion.  staging area.
