@@ -17,7 +17,15 @@
        
             <h3>Registro</h3> 
             <!--mostrar errores-->
-             
+             <?php if (isset($_SESSION['completado'])): ?>
+                <div class ="alerta alerta-exito">
+                    <?=$_SESSION['completado']?>
+                </div>
+             <?php elseif(isset($_SESSION['completado']['general'])): ?>
+                <div class ="alerta alerta-error">
+                    <?=$_SESSION['completado']['general']?>
+                </div>                
+             <?php endif; ?>
                 <form action="login.php" method="POST">
                 <label for="name">Nombre</label>
                 <input id="input" type="text" name="name" style="color:blue" /> <br/>

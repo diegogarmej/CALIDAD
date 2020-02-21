@@ -29,7 +29,7 @@ function borrarErrores(){
     if(isset ($_SESSION['completado'])){
     
         $_SESSION['completado'] = null;
-        session_unset($_SESSION['completado']);
+        session_unset();
     }
     
     return $borrado;

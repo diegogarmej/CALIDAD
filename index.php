@@ -6,7 +6,7 @@
             <!--inicio de sesion--->
             <div id="login" style= color >
                     <h3>Ingreso</h3>
-                    <form action="index.php" method="POST">
+                    <form action="iniciosesion.php" method="POST">
                         <label for="email">Email</label>
                         <input id="input" type="email" name="email" style="color:blue" /> <br/>
 

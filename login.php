@@ -13,7 +13,7 @@ if(isset($_POST)){
     $nombre = isset ($_POST['name']) ? $_POST['name'] : false;
     $apellidos   = isset ($_POST['apellido']) ? $_POST['apellido'] : false;
     $numerodocumento=  isset ($_POST['numerodocumento']) ? $_POST['numerodocumento'] : false;
-    $correo= isset ($_POST['correo']) ? $_POST['correo'] : false;
+    $correo= isset ($_POST['correo']) ? trim($_POST['correo']) : false;
     $codigoETB = isset ($_POST['codigo']) ? $_POST['codigo'] : false;
     $password = isset  ($_POST['contraseña']) ? $_POST['contraseña'] : false;
 
@@ -31,7 +31,7 @@ if(isset($_POST)){
             
         }else{
             $nombre_valido = false;
-            $errores['nombre'] = "el nombre no  es valido";
+            $errores['nombre'] = "El nombre no  es valido";
             
         }
          //Validar campo apellidos 
@@ -40,7 +40,7 @@ if(isset($_POST)){
             $apellidos_valido =true;
         }else{
             $apellidos_valido = false;
-            $errores['apellidos'] = "los apellidos no son validos";
+            $errores['apellidos'] = "Los apellidos no son validos";
             
         }
 
@@ -51,7 +51,7 @@ if(isset($_POST)){
             $numero_documento_valido =true;
         }else{
             $numero_documento_valido = false;
-            $errores['numerodocumento'] = "el numero de documento no es valido";
+            $errores['numerodocumento'] = "El numero de documento no es valido";
            
         }   
         //Validar campo correo
@@ -59,7 +59,7 @@ if(isset($_POST)){
             $correo_valido=true;
         }else{
             $correo_valido = false;
-            $errores['correo'] = "el correo no es valido";
+            $errores['correo'] = "El correo no es valido";
         }    
 
         //validar campo codigo ETB
@@ -69,7 +69,7 @@ if(isset($_POST)){
         }else{
 
             $codigoETB_valido= false;
-            $errores['codigo'] = "el codigo ETB no es valido";
+            $errores['codigo'] = "El codigo ETB no es valido";
         }
 
 
@@ -97,16 +97,23 @@ if(isset($_POST)){
                 $sql = "INSERT INTO auditor VALUES (null, '$nombre', '$apellidos', '$numerodocumento', '$correo', '$codigoETB', '$password_segura');";
                 $guardar  = mysqli_query($db, $sql );
 
+                if($guardar){
+
+                    $_SESSION['completado']= "El registro se completo con exito";
+                }else {
+                    $_SESSION['errores']['general']= "fallo al registrar el usuario :|";
+
+                }
+
         }
         else{
             $_SESSION['errores'] = $errores;
-           header ('Location: registro.php'); 
-
-
-        }
+              }
+        
 
              
  //var_dump($_SESSION['errores']);
  //var_dump($_SESSION['errores']);
 
 }
+header ('Location: registro.php'); 
