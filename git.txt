@@ -15,3 +15,5 @@ Tres secciones principales de un proyecto de GIT:
 2. El directorio de trabajo. working directory.
 
 3. El area de preparacion.  staging area.
+
+prueba de actualizacion
