@@ -1,4 +1,4 @@
- git tiene tres estados principales :
+ git tiene tres estados principales para cada uno de los archivos:
 
 1. Confirmado: significa que los datos estan almacenados de manera segura en la base de datos local.
 
@@ -15,3 +15,15 @@ Tres secciones principales de un proyecto de GIT:
 2. El directorio de trabajo. working directory.
 
 3. El area de preparacion.  staging area.
+
+Direcctorios en git.
+1. DIrectorio git: copias instantaneas del proyecto en general metadatos
+2. Directorio de Trabajo: copia de los archivos para trabajar, si es un proyecto clonado.
+3. El área de preparación es un archivo almacena la información que se va a enviar en la próxima confirmación.
+
+
+El flujo de trabajo básico en git es algo así:
+
+1. se modifican algunos archivos en el directorio de trabajo 
+2. se preparan los archivos añadiéndolos al area de preparación 
+3. Se confirman los cambios, que hace que se guarden los archivos tal y como estan de manera permanente en el directorio git.
