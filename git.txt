@@ -28,8 +28,54 @@ El flujo de trabajo básico en git es algo así:
 1. se modifican algunos archivos en el directorio de trabajo 
 2. se preparan los archivos añadiéndolos al area de preparación 
 3. Se confirman los cambios, que hace que se guarden los archivos tal y como estan de manera permanente en el directorio git.
-=======
-prueba de actualizacion
 
-hola que hace
->>>>>>> a37a80eda1dbda4204ab6b3c0131576950f0c76c
+-Configuraciones iniciales en git 
+	1. Configurar usuario git ya sea de manera global o a nivel del directorio en el que se trabajara:
+	-comandos basicos de configuracion
+	1.1 git config --list: muestra la configuración actual como usuario email, editor
+	1.2 git config user.name = configura el usuario general del usuario para el proyecto
+	1.2 git config user.email = configura el correo general del usuario para el proyecto
+	1.3 utilizar la palabra --globan despues de git hara que este usuario se utilice de manera global en todos los proyectos almacenados en le pc.
+-
+
+Inicializar un repositorio
+
+la palabra para iniciar un repositorio git es:	
+	1.git init esto crea una carpeta oculta con el nombre .git en donde se almacenan todos los datos de los archivos 
+	2. git clone permimte obtener una carperta con al gun proyecto especifico que se quiera clonar utilizando la ruta 
+		https://github.com/ruta/proyecto/a clonar
+
+Guardar cambios en los archivos:
+
+1 los archivos presentan dos estados:
+	1.1 Rastreados : "tracked files" son aquellos archivos que estan almacenados como la ultima compia dentro de la carpeta git
+	1.2 sin rastrear:  son loas archivos que no estaban en la carpeta git al momento de iniciar o clonar el repo 
+ Cuando se clona un proyecto todos los archivos estan rastreados y sin modificar. cuando se edita algun archivo git los ve modificados, luego se preparan y luego se confirman los cambios anteriormente preparados, se repite el ciclo con cada archivo y/o modificación:
+  	
+
+	
+Revisando el estado de los archivos
+	el comando princuipal para revisar el estado de los archivos:
+	1. git status: este muestra el estado de los archivos si estan rastreados o sinrastrear, modificados, sin modificar, o en el area staged:
+   
+Rastrear Archivos Nuevos
+	1. cuando se ejecuta git status despues de crear un nuevo archivo no sera añadido a la carpéta git hasta que se lo indiquemos estos archivos 			nuevos son los archivos sin rastrear, de manera que git no añade ningun archivo sin que se lo indiquemos.
+	2. el comando para que git ratree el nuevo archivo o modificacion de algún archivo existenete en el proyecto es:
+			"git add ." o " git add namefile" el punto indica a git que añada todos los archivos modificados o sin modificar al area 				de paracion pasa de igual manera indicandole el nombre del archivo.
+	3. Si se modifica algun archvio se mostrara como  cambios sin ser ratreados, de igual manera se deben añadir al stage area con el comando git		 add.	
+	Luego de añadir un archivo nuevo o modificado con el comando git add, estos ya estan en el área de preparación y estan listos para ser 		      confirmados (quiere decir que se guardaran tal y como estan en el area de preapracion) para ser enviados al repositorio
+
+Ver cambios preparados y no preparados
+
+	1. el comando git status tiene funciones que permite ver de manera general el estado de los archivos, mostrando que esta rastrado y que no y q		que esta preparado o en el área stage. unba manera mas simplifacda de mostrar la informacion es mendiante git ststus -s
+	2. el comando git diff muestra informacion detallada de las lineas de codigo añadidas o borradas del archivo o archivos en general y su estado		 final con signos de "+" o "-" si fueron añadidas o eliminadas respectivamente realizando una comparacion entre lo que esta gurado en el 	       directorio git donde esta la altima copia  exacta del archivo.
+	3. El comando git diff sin mas parametros premite responder a la pregunta ¿qué se ha cambiado pero no esta preparado?
+	4. si se quiere ver que fue modificado y se encuentra en el área stage o preparación se utiliza el comando git diff --stage, comparando así lo		 los ultimos cambios con la ultima isntatanea.
+	
+Confirmar los cambios:
+	1. El comando git commit permite confirmar los cambios echos en los archivos pero que esten en el área stage, sin no estan en esta area no ser		 confirmados para ser guardados en el repositorio como una instantanea de los archivos editados.
+
+	2. cada vez que se realice un commit del archivo o archivos se guardara una instatanea (una copia en ese punto del proyecto) a la que se podra 		 acceder para comparar o volver a ella luego.
+	 		
+
+
