@@ -19,3 +19,5 @@ Tres secciones principales de un proyecto de GIT:
 prueba de actualizacion
 
 hola que hace
+
+validadnod los commit 
