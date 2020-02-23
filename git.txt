@@ -16,6 +16,7 @@ Tres secciones principales de un proyecto de GIT:
 
 3. El area de preparacion.  staging area.
 
+<<<<<<< HEAD
 Direcctorios en git.
 1. DIrectorio git: copias instantaneas del proyecto en general metadatos
 2. Directorio de Trabajo: copia de los archivos para trabajar, si es un proyecto clonado.
@@ -27,3 +28,8 @@ El flujo de trabajo básico en git es algo así:
 1. se modifican algunos archivos en el directorio de trabajo 
 2. se preparan los archivos añadiéndolos al area de preparación 
 3. Se confirman los cambios, que hace que se guarden los archivos tal y como estan de manera permanente en el directorio git.
+=======
+prueba de actualizacion
+
+hola que hace
+>>>>>>> a37a80eda1dbda4204ab6b3c0131576950f0c76c
