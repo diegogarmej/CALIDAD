@@ -5,7 +5,7 @@
         <div id="container">
             <!--inicio de sesion--->
             <div id="login" style= color >
-                    <h3>Ingreso</h3>
+                    <h3>Bienvenidos al sistema de gestios calidad coorporativa</h3>
                     <form action="iniciosesion.php" method="POST">
                         <label for="email">Email</label>
                         <input id="input" type="email" name="email" style="color:blue" /> <br/>
