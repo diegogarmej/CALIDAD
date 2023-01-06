@@ -15,7 +15,7 @@
 
                         <input type="submit" value="Iniciar" />
 
-                        <h3>Crear Cuenta</h3>
+                        <h3>no tiene usuario en el sistema de click en: Crear Cuenta</h3>
                       </form>  
                        <form action="./registro.php" method="POST"> 
                         <input id="registrar" type="submit" value="Registrate"/>  
